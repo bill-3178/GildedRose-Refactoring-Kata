@@ -42,19 +42,20 @@ class GildedRose {
             }
 
             if (item.sellIn < 0) {
-                if (!item.name.equals(AGED_BRIE)) {
-                    if (!item.name.equals(BACKSTAGE_PASSES)) {
+                if (item.name.equals(AGED_BRIE)) {
+//                    if (item.quality < 50) {
+//                        // FIXME Not mentioned that quality of Brie increases twice as much once the sell by date has passed
+//                        item.quality = item.quality + 1;
+//                    }
+                } else {
+                    if (item.name.equals(BACKSTAGE_PASSES)) {
+                        item.quality = 0;
+                    } else {
                         if (item.quality > 0) {
                             if (!item.name.equals(SULFURAS)) {
                                 item.quality = item.quality - 1;
                             }
                         }
-                    } else {
-                        item.quality = item.quality - item.quality;
-                    }
-                } else {
-                    if (item.quality < 50) {
-                        item.quality = item.quality + 1;
                     }
                 }
             }
