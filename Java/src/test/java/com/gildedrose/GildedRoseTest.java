@@ -74,7 +74,7 @@ class GildedRoseTest {
         assertEquals(24, agedBrie.sellIn);
         assertEquals(24, backstagePasses.sellIn);
         assertEquals(24, app.getItems()[3].sellIn);
-        assertEquals(80, sulfuras.quality);
+        assertEquals(ItemUtils.SULFURAS_QUALITY, sulfuras.quality);
         assertEquals(3, agedBrie.quality);
         assertEquals(6, backstagePasses.quality);
         assertEquals(49, app.getItems()[3].quality);
@@ -90,7 +90,7 @@ class GildedRoseTest {
         for (int i = 0; i < loops; i++) {
             app.updateQuality();
             assertEquals(25, sulfuras.sellIn);
-            assertEquals(80, sulfuras.quality);
+            assertEquals(ItemUtils.SULFURAS_QUALITY, sulfuras.quality);
         }
     }
 
