@@ -32,10 +32,14 @@ class GildedRose {
                         item.quality = item.quality + 1;
 
                         if (item.name.equals(BACKSTAGE_PASSES)) {
-                            // limits have been included
+                            // limit values have been included
                             if (item.sellIn <= 6) {
-                                item.quality += 2;
-                            } else if (item.sellIn <= 11) {
+                                if (item.quality <= 48) {
+                                    item.quality += 2;
+                                } else if (item.quality < 50) {
+                                    item.quality++;
+                                }
+                            } else if (item.sellIn <= 11 && item.quality < 50) {
                                 item.quality++;
                             }
                         }
@@ -73,10 +77,11 @@ class GildedRose {
             if (it.name == null || it.name.length() <= 0) {
                 throw new IllegalStateException("Item name cannot be null or empty");
             }
-            // Specific case of 'Sulfuras' could be implemented here depending of the requirements
-            if (it.quality < 0 || it.quality > 50) {
+            if (it.quality < 0 || (it.quality > 50 && !it.name.equals(SULFURAS)) || it.quality > 80) {
                 throw new IllegalStateException("Item quality must be a positive number between 0 and 50");
             }
+
+            // Specific check on 'Sulfuras' fixed quality could be added depending on the requirements
         }
     }
 

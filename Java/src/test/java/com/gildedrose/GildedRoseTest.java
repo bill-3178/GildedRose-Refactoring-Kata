@@ -96,7 +96,7 @@ class GildedRoseTest {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/testData.csv", delimiter = ';', numLinesToSkip = 1)
-    void testItemUpdate(String itemName, int sellIn, int quality, int loops, int expectedSellIn, int expectedQuality) {
+    void testCsvUpdates(String itemName, int sellIn, int quality, int loops, int expectedSellIn, int expectedQuality) {
         Item item = new Item(itemName, sellIn, quality);
 
         GildedRose app = new GildedRose(new Item[] { item });

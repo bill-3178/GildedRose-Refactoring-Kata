@@ -1,10 +1,22 @@
 item;sellIn;quality;loops;expectedSellIn;expectedQuality
+
 Sulfuras, Hand of Ragnaros;25;40;1;25;80
 Sulfuras, Hand of Ragnaros;25;40;100;25;80
+
 Aged Brie;25;40;1;24;41
 Aged Brie;25;2;25;0;27
 Aged Brie;25;2;26;-1;28
+Aged Brie;25;2;27;-2;29
+Aged Brie;25;2;50;-25;50
 Aged Brie;25;50;25;0;50
+Aged Brie;1;47;1;0;48
+Aged Brie;1;48;1;0;49
+Aged Brie;1;49;1;0;50
+Aged Brie;1;50;1;0;50
+Aged Brie;1;10;1;0;11
+Aged Brie;0;10;1;-1;11
+Aged Brie;0;10;2;-2;12
+
 Backstage passes to a TAFKAL80ETC concert;25;40;1;24;41
 Backstage passes to a TAFKAL80ETC concert;25;2;14;11;16
 Backstage passes to a TAFKAL80ETC concert;25;2;15;10;18
@@ -14,6 +26,29 @@ Backstage passes to a TAFKAL80ETC concert;25;2;21;4;32
 Backstage passes to a TAFKAL80ETC concert;25;2;25;0;44
 Backstage passes to a TAFKAL80ETC concert;25;2;26;-1;0
 Backstage passes to a TAFKAL80ETC concert;25;50;25;0;50
+Backstage passes to a TAFKAL80ETC concert;10;47;1;9;49
+Backstage passes to a TAFKAL80ETC concert;10;47;3;7;50
+Backstage passes to a TAFKAL80ETC concert;10;46;9;1;50
+Backstage passes to a TAFKAL80ETC concert;10;46;10;0;50
+Backstage passes to a TAFKAL80ETC concert;10;46;11;-1;0
+Backstage passes to a TAFKAL80ETC concert;12;0;1;11;1
+Backstage passes to a TAFKAL80ETC concert;11;0;1;10;2
+Backstage passes to a TAFKAL80ETC concert;7;0;1;6;2
+Backstage passes to a TAFKAL80ETC concert;6;0;1;5;3
+
+Backstage passes to a TAFKAL80ETC concert;11;46;1;10;48
+Backstage passes to a TAFKAL80ETC concert;11;47;1;10;49
+Backstage passes to a TAFKAL80ETC concert;11;48;1;10;50
+Backstage passes to a TAFKAL80ETC concert;11;49;1;10;50
+
+Backstage passes to a TAFKAL80ETC concert;6;46;1;5;49
+Backstage passes to a TAFKAL80ETC concert;6;47;1;5;50
+Backstage passes to a TAFKAL80ETC concert;6;48;1;5;50
+
+Backstage passes to a TAFKAL80ETC concert;1;46;1;0;49
+Backstage passes to a TAFKAL80ETC concert;1;47;1;0;50
+Backstage passes to a TAFKAL80ETC concert;1;48;1;0;50
+
 Conjured;25;15;1;24;13
 Conjured;25;15;15;10;0
 Conjured;25;15;25;0;0
@@ -25,6 +60,10 @@ Conjured;10;30;12;-2;2
 Conjured;10;30;13;-3;0
 Conjured;10;30;16;-6;0
 Conjured;10;29;12;-2;1
+Conjured;1;10;1;0;8
+Conjured;0;10;1;-1;6
+Conjured;0;10;2;-2;2
+
 bean;25;15;1;24;14
 bean;25;15;15;10;0
 bean;25;15;25;0;0
@@ -33,3 +72,6 @@ bean;10;15;11;-1;3
 bean;10;15;12;-2;1
 bean;10;15;15;-5;0
 bean;10;15;20;-10;0
+bean;1;10;1;0;9
+bean;0;10;1;-1;8
+bean;0;10;2;-2;6
