@@ -8,7 +8,6 @@ public class ItemUtils {
     public static final String BACKSTAGE_PASSES = "Backstage passes to a TAFKAL80ETC concert";
     public static final String CONJURED = "Conjured";
 
-    public static boolean isNameEquals(Item item, String name) {
-        return item.name.equals(name);
-    }
+    public static final int SULFURAS_QUALITY = 80;
+
 }

@@ -6,6 +6,7 @@ class GildedRose {
     private final Item[] items;
 
     public GildedRose(Item[] items) {
+        checkItemPreConditions(items);
         this.items = items;
     }
 
@@ -63,6 +64,18 @@ class GildedRose {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    private void checkItemPreConditions(Item[] items) {
+        for (Item it : items) {
+            if (it.name == null || it.name.length() <= 0) {
+                throw new IllegalStateException("Item name cannot be null or empty");
+            }
+            // Specific case of 'Sulfuras' could be implemented here depending of the requirements
+            if (it.quality < 0 || it.quality > 50) {
+                throw new IllegalStateException("Item quality must be a positive number between 0 and 50");
             }
         }
     }

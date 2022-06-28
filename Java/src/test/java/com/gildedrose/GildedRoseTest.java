@@ -6,7 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GildedRoseTest {
 
@@ -18,6 +18,37 @@ class GildedRoseTest {
         assertEquals("foo", app.getItems()[0].name);
     }
 
+    @Test
+    public void itemWithNullNameShouldThrowPreConditionException() {
+        Item[] items = new Item[] { new Item(null, 0, 0) };
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            new GildedRose(items);
+        });
+    }
+
+    @Test
+    public void itemWithNegativeQualityShouldThrowPreConditionException() {
+        Item[] items = new Item[] { new Item("ledger", 0, -1) };
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            new GildedRose(items);
+        });
+    }
+
+    @Test
+    public void itemWithExceededQualityShouldThrowPreConditionException() {
+        Item[] items = new Item[] { new Item("ledger", 0, 51) };
+        Exception exception = assertThrows(RuntimeException.class, () -> {
+            new GildedRose(items);
+        });
+    }
+
+    @Test
+    public void correctlyInitializedItemShouldNotThrowPreConditionException() {
+        Item[] items = new Item[] { new Item("ledger", 0, 10) };
+        assertDoesNotThrow(() -> {
+            new GildedRose(items);
+        });
+    }
 
     @Test
     void testUpdates() {
@@ -43,7 +74,7 @@ class GildedRoseTest {
         assertEquals(24, agedBrie.sellIn);
         assertEquals(24, backstagePasses.sellIn);
         assertEquals(24, app.getItems()[3].sellIn);
-        assertEquals(40, sulfuras.quality);
+        assertEquals(80, sulfuras.quality);
         assertEquals(3, agedBrie.quality);
         assertEquals(6, backstagePasses.quality);
         assertEquals(49, app.getItems()[3].quality);
@@ -59,7 +90,7 @@ class GildedRoseTest {
         for (int i = 0; i < loops; i++) {
             app.updateQuality();
             assertEquals(25, sulfuras.sellIn);
-            assertEquals(40, sulfuras.quality);
+            assertEquals(80, sulfuras.quality);
         }
     }
 
